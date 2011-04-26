@@ -67,6 +67,6 @@ class Friendship < ActiveRecord::Base
   end
   
   def relation_names
-    relations.all(:select => :name, :order => :name).collect{|r| r.name}
+    relations.order(:name).collect{|r| r.name}
   end
 end

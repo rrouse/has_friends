@@ -10,6 +10,7 @@ module Has
         
         has_many :friendships
         has_many :friends, :through => :friendships, :source => :friend, :conditions => "friendships.status = 'accepted'"
+        has_many :friendships_awaiting_acceptance, :conditions => "friendships.status = 'requested'", :class_name => 'Friendship', :foreign_key => :friend_id
         
         after_destroy :destroy_all_friendships
       end
