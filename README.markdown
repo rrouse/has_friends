@@ -10,7 +10,7 @@ friends_count on users' table.
 Instalation
 -----------
 
-1) Add a gem line to your Gemfile. `gem 'has_friends-rails3, :require => 'has_friends'`
+1) Add a gem line to your Gemfile. `gem 'has_friends-rails3', :require => 'has_friends'`
 
 2) Execute the plugin generator `rails g has_friends:migration`
 
